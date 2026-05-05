@@ -1,55 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Mini SOC - Network Analysis</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini SOC - Network Traffic Analysis</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <div class="container">
+  <div class="background-grid"></div>
 
-    <h1>🔐 Mini SOC</h1>
+  <header class="hero">
+    <div class="badge">Cybersecurity Lab • Docker • Wireshark • Nmap</div>
+
+    <h1>Mini SOC</h1>
     <h2>Analyse de trafic réseau & détection d’anomalies</h2>
 
-    <p class="intro">
-      Projet de laboratoire réseau simulé avec Docker permettant
-      la capture et l’analyse de trafic avec Wireshark et Tcpdump.
+    <p>
+      Laboratoire réseau simulé avec Docker permettant de capturer, analyser
+      et interpréter du trafic réseau avec Tcpdump, Wireshark et Nmap.
     </p>
 
-    <div class="tags">
-      <span>Docker</span>
-      <span>Wireshark</span>
-      <span>Nmap</span>
-      <span>Cybersecurity</span>
-    </div>
-
-    <h3>📊 Fonctionnalités</h3>
-
-    <ul>
-      <li>Capture de trafic HTTP non chiffré</li>
-      <li>Analyse avec Wireshark</li>
-      <li>Détection de scan réseau (Nmap)</li>
-      <li>Interprétation des paquets TCP</li>
-    </ul>
-
-    <h3>📸 Analyse du trafic</h3>
-
-    <div class="images">
-      <img src="captures/wireshark_http.png">
-      <img src="captures/wireshark_nmap.png">
-    </div>
-    <p class="note">
-      ⚠️ Le trafic HTTP est analysable en clair, contrairement aux communications sécurisées (HTTPS/SSH).
-    </p>
-    <div class="cta">
+    <div class="buttons">
       <a href="https://github.com/idrissa260/network-traffic-analysis-mini-soc" target="_blank">
-        🔗 Voir le projet GitHub
+        Voir le repo GitHub
       </a>
+      <a href="#analyse" class="secondary">Voir l’analyse</a>
     </div>
+  </header>
 
-  </div>
+  <main>
 
+    <section class="cards">
+      <div class="card">
+        <h3>HTTP Traffic</h3>
+        <p>Analyse d’une communication HTTP visible en clair.</p>
+      </div>
+
+      <div class="card">
+        <h3>Nmap Scan</h3>
+        <p>Détection de paquets SYN caractéristiques d’un scan réseau.</p>
+      </div>
+
+      <div class="card">
+        <h3>Docker Lab</h3>
+        <p>Environnement isolé et reproductible avec Docker Compose.</p>
+      </div>
+    </section>
+
+    <section id="analyse" class="analysis">
+      <h2>Captures Wireshark</h2>
+
+      <div class="image-grid">
+        <div class="image-card reveal">
+          <img src="captures/wireshark_http.png" alt="Analyse HTTP Wireshark">
+          <h3>Capture HTTP</h3>
+          <p>Requête GET visible en clair et réponse serveur HTTP 200 OK.</p>
+        </div>
+
+        <div class="image-card reveal">
+          <img src="captures/wireshark_nmap.png" alt="Scan Nmap Wireshark">
+          <h3>Détection Nmap</h3>
+          <p>Paquets SYN envoyés vers plusieurs ports : pattern typique de reconnaissance réseau.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Compétences mises en œuvre</h2>
+
+      <div class="tags">
+        <span>TCP/IP</span>
+        <span>HTTP</span>
+        <span>Wireshark</span>
+        <span>Tcpdump</span>
+        <span>Nmap</span>
+        <span>Docker</span>
+        <span>Analyse SOC</span>
+        <span>Détection d’anomalies</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Idrissa SALL — Ingénieur IT • Réseaux • Cybersécurité • Data</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
