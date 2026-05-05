@@ -137,6 +137,10 @@ Ce projet reproduit un cas réel d’analyse SOC :
 
 ---
 
+## 🌐 Project Page
+
+A visual presentation page is available in `index.html`.
+
 ## Auteur
 
 **Idrissa SALL**  
