@@ -1,0 +1,28 @@
+services:
+  nginx-server:
+    image: nginx:alpine
+    container_name: nginx-server
+    ports:
+      - "8080:80"
+    networks:
+      labnet:
+        ipv4_address: 172.20.0.10
+
+  client-analyzer:
+    image: kalilinux/kali-rolling
+    container_name: client-analyzer
+    command: sleep infinity
+    privileged: true
+    networks:
+      labnet:
+        ipv4_address: 172.20.0.20
+    volumes:
+      - ./captures:/captures
+      - ./scripts:/scripts
+
+networks:
+  labnet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
